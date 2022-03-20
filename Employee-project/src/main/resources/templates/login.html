@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login Page</title>
+    <style>
+    
+    body {
+     background-image: url("images/bg7.jpg");
+     background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:1400px 600px ;
+        }
+        .center{
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:40px;
+}
+h1{
+color:black;
+font-size: 50px;
+font-weight:bold;
+padding-top:50px;
+}
+input[type=text], select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+   label{
+   
+font-size:30px;   
+   
+   }  
+   a{
+   text-decoration:none;
+   font-size:20px;
+   color:blue;
+   }
+        </style>
+    
+</head>
+<body>
+<div class="center">
+    
+                        <h1>SIGN IN</h1>
+                    
+                <div th:if="${param.error}">
+                    <span>Invalid Email or Password</span>
+                </div>
+
+                <div th:if="${param.logout}" >
+                    <span>You've successfully logged out</span>
+                </div>
+
+                <form method="POST" action="/login">
+                    
+                        <label for="username">Username:</label><br>
+                        <input  id="username" name="username" placeholder="username" type="text"/><br><br>
+                    
+                    
+                        <label for="password">Password:</label><br>
+                        <input  id="password" name="password" placeholder="password"
+                               type="password"/><br><br>
+                    
+                    
+                        <input type="submit" value="Login">
+                    
+                </form>
+                        <a th:href="@{/}">Home Page</a>
+        
+</div>
+</body>
+</html>

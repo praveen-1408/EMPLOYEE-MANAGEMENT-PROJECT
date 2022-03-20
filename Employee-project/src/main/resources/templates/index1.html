@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Security Demo</title>
+   <style>
+   .container{
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:40px;
+}
+body {
+     background-image: url("images/bg3.jpg");
+     background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:1400px 600px ;
+        }
+h1{
+color:white;
+font-size: 50px;
+font-weight:bold;
+padding-top:130px;
+}
+
+.button1 {
+ background-color: #48D1CC;
+  border: none;
+  border-radius:12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {
+ background-color: #D87093;
+  border: none;
+  border-radius:12px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button3 {
+ background-color: #6A5ACD;
+  border: none;
+  border-radius:12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+   </style>
+</head>
+<body>
+<div class="container">
+    
+                        <h1>EMPLOYEE MANAGEMENT SYSTEM</h1>
+                    
+
+            
+                
+                    <a th:href="@{/index/home}"><button class="button1">Admin Login</button></a></br></br>
+                
+                    <a th:href="@{/user/home}"><button class="button2">User Login</button></a></br></br>
+            
+                    <a th:href="@{/logout}"><button class="button3">Logout Page</button></a>
+            
+</div>
+</body>
+</html>
